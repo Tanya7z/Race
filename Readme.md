@@ -1,4 +1,4 @@
-# Addon  V0.0.1
+# Addon  V0.0.2
 ## 目前所含模块：
  - NPC：
    - 共三个：
@@ -13,7 +13,7 @@
    - /title @p title title 标题1 目前贴图用于演示
    - /title @p title subtitle 标题2 
    - /title @p title t1-t7 用于显示字幕 目前贴图用于演示
-  - 脚本：  
-   - 添加于_0.0.2_  
-# [剧本](Plot.md)  
+  - 脚本 V0.0.1：  
+   - 添加于 _0.0.2_  
+# 剧本  
 _[点击跳转](Plot.md)_
