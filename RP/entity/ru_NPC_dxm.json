@@ -1,0 +1,66 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "ru:npc_dxm",
+            "materials": {
+                "default": "npc"
+            },
+            "textures": {
+                "ruNPCpidu_0": "textures/entity/ruNPCpidu/ruNPCpidu_0",
+                "ruNPCpidu_1": "textures/entity/ruNPCpidu/ruNPCpidu_1",
+                "ruNPCpidu_2": "textures/entity/ruNPCpidu/ruNPCpidu_2",
+                "ruNPCpidu_3": "textures/entity/ruNPCpidu/ruNPCpidu_3",
+                "ruNPCpidu_4": "textures/entity/ruNPCpidu/ruNPCpidu_4",
+                "ruNPCpidu_5": "textures/entity/ruNPCpidu/ruNPCpidu_5",
+                "ruNPCpidu_6": "textures/entity/ruNPCpidu/ruNPCpidu_6",
+                "ruNPCpidu_7": "textures/entity/ruNPCpidu/ruNPCpidu_7",
+                "ruNPCpidu_8": "textures/entity/ruNPCpidu/ruNPCpidu_8",
+                "ruNPCpidu_9": "textures/entity/ruNPCpidu/ruNPCpidu_9",
+                "ruNPCpidu_10": "textures/entity/ruNPCpidu/ruNPCpidu_10",
+                "ruNPCpidu_11": "textures/entity/ruNPCpidu/ruNPCpidu_11",
+                "ruNPCpidu_12": "textures/entity/ruNPCpidu/ruNPCpidu_12",
+                "ruNPCpidu_13": "textures/entity/ruNPCpidu/ruNPCpidu_13",
+                "ruNPCpidu_14": "textures/entity/ruNPCpidu/ruNPCpidu_14",
+                "ruNPCpidu_15": "textures/entity/ruNPCpidu/ruNPCpidu_15",
+                "ruNPCpidu_16": "textures/entity/ruNPCpidu/ruNPCpidu_16",
+                "ruNPCpidu_17": "textures/entity/ruNPCpidu/ruNPCpidu_17",
+                "ruNPCpidu_18": "textures/entity/ruNPCpidu/ruNPCpidu_18",
+                "ruNPCpidu_19": "textures/entity/ruNPCpidu/ruNPCpidu_19",
+                "ruNPCpidu_20": "textures/entity/ruNPCpidu/ruNPCpidu_20",
+                "ruNPCpidu_21": "textures/entity/ruNPCpidu/ruNPCpidu_21",
+                "ruNPCpidu_22": "textures/entity/ruNPCpidu/ruNPCpidu_22",
+                "ruNPCpidu_23": "textures/entity/ruNPCpidu/ruNPCpidu_23",
+                "ruNPCpidu_24": "textures/entity/ruNPCpidu/ruNPCpidu_24"
+            },
+            "geometry": {
+                "default": "geometry.humanoid.customSlim"
+            },
+            "scripts": {
+                "animate": [
+                    "general",
+                    {
+                        "move": "query.modified_move_speed"
+                    },
+                    "look_at_target",
+                    {
+                        "baby_transform": "query.is_baby"
+                    }
+                ]
+            },
+            "animations": {
+                "general": "animation.npc.general",
+                "look_at_target": "animation.common.look_at_target",
+                "move": "animation.npc.move",
+                "baby_transform": "animation.npc.baby_transform"
+            },
+            "render_controllers": [
+                "controller.render.ru_npc_dxm"
+            ],
+            "spawn_egg": {
+                "texture": "spawn_egg",
+                "texture_index": 35
+            }
+        }
+    }
+}

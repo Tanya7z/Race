@@ -1,0 +1,59 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "地图专用",
+        "name": "地图专用",
+        "uuid": "438e3d9b-8996-d90a-5f75-d6c213decdbe",
+        "version": [
+            0,
+            0,
+            1
+        ],
+        "min_engine_version": [
+            1,
+            8,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "地图专用",
+            "type": "data",
+            "uuid": "0eaff84b-1b8a-95d1-2406-a3adae08215a",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        },
+        {
+            "uuid": "b71e6435-13b2-40bd-55d2-ca66641602d0",
+            "version": [
+                0,
+                0,
+                1
+            ],
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/Main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b99c012e-187a-a6e9-9cd1-e858aa34764c",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.0.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-gametest",
+            "version": "1.0.0-beta"
+        }
+    ]
+}
