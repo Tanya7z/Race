@@ -1,9 +1,0 @@
-{
-  "resource_pack_name": "vanilla",
-  "texture_name": "atlas.items",
-  "texture_data": {
-    "egg_camel": {
-      "textures": "textures/items/egg_camel"
-    }
-  }
-}
