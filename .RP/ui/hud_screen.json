@@ -1,0 +1,615 @@
+{
+  //控制原版元素可见性
+  "centered_gui_elements_at_bottom_middle": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'hud hide' or #text = 't1' or #text = 't2' or #text = 't3' or #text = 't4' or #text = 't5' or #text = 't6' or #text = 't7'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mob_effects_renderer": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'hud hide' or #text = 't1' or #text = 't2' or #text = 't3' or #text = 't4' or #text = 't5' or #text = 't6' or #text = 't7'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "cursor_renderer": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'hud hide' or #text = 't1' or #text = 't2' or #text = 't3' or #text = 't4' or #text = 't5' or #text = 't6' or #text = 't7'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "chat_panel": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'hud hide'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "centered_gui_elements": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'hud hide' or #text = 't1' or #text = 't2' or #text = 't3' or #text = 't4' or #text = 't5' or #text = 't6' or #text = 't7'))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+  // //用"bars in" or "bars out"隐藏actionbar的文本
+  // "hud_actionbar_text": {
+		// "ignored": "($actionbar_text = 'bars in' or $actionbar_text = 'bars out')"
+	// },
+  // //当前缀有"subtitle" 显示actionbar的文本
+  // "hud_actionbar_text/actionbar_message": {
+          // "text": "($actionbar_text - 'subtitle ')"
+	// },
+  //修改标题的外观以便统计可见
+  "hud_title_text": {
+    "bindings":[
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#text",
+        "binding_type": "global"
+      },
+      {  //防止显示带有功能的标题，如“subtitle”、“blink”等
+        "binding_type": "view",
+        "source_property_name": "(not (#text = 'title' or #text = 'subtitle' or #text = 'blink' or #text = 'blink slow in' or #text = 'blink slow out' or #text = 'hud hide' or #text = 'hud show' or #text = 't1' or #text = 't2' or #text = 't3' or #text = 't4' or #text = 't5' or #text = 't6' or #text = 't7'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //这里定义了不同的自定义元素：
+
+  //黑色覆盖图像，用于许多命令。
+  "black_conditional_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": ["300%", "300%"],
+    "fill": true,
+    "keep_ratio": true,
+    "alpha": "$anim_alpha",
+    "uv": [0, 0],
+		"layer": 100,
+    "ignored": "(not ($title_text = 'title' or $title_text = 'blink' or $title_text = 'blink slow out' or $title_text = 'blink slow in' or $title_text = 't1' or $title_text = 't7'))",
+    "variables": [
+      {
+        "requires": "($title_text = 'title')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 'blink'))",
+        "$anim_alpha": "@blink_anim0"
+      },
+      {
+        "requires": "($title_text = 'blink slow out'))",
+        "$anim_alpha": "@blink_slow_out"
+      },
+      {
+        "requires": "($title_text = 'blink slow in'))",
+        "$anim_alpha": "@blink_slow_in"
+      },
+      {
+        "requires": "($title_text = 't1')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't2')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't3')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't4')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't5')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't6')",
+        "$anim_alpha": "@black_anim0"
+      },
+      {
+        "requires": "($title_text = 't7')",
+        "$anim_alpha": "@black_anim0"
+      }
+    ]
+	},
+
+  //标题显示，对于地图的开头很有用，可以复制以添加其他元素。
+  "main_title_conditional_image": {
+      "type": "image",
+      "texture": "textures/ui/custom/title",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 'title'))"
+  },
+  "subtitle_conditional_image": {
+    "type": "image",
+    "texture": "textures/ui/custom/subtitle",
+    "size": ["23%","23%"], //设置字幕大小（作者）
+    "alpha": "@anim_size_subtitle0",
+    "uv": [0, 0],
+    "layer": 101,
+    "bilinear": true,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "ignored": "(not ($title_text = 'subtitle'))"
+},
+"tong_1": {
+      "type": "image",
+      "texture": "textures/ui/T/1",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't1'))"
+  },
+"tong_2": {
+      "type": "image",
+      "texture": "textures/ui/T/2",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't2'))"
+  },
+  "tong_3": {
+      "type": "image",
+      "texture": "textures/ui/T/3",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't3'))"
+  },
+  "tong_4": {
+      "type": "image",
+      "texture": "textures/ui/T/4",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't4'))"
+  },
+  "tong_5": {
+      "type": "image",
+      "texture": "textures/ui/T/5",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't5'))"
+  },
+  "tong_6": {
+      "type": "image",
+      "texture": "textures/ui/T/6",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't6'))"
+  },
+  "tong_7": {
+      "type": "image",
+      "texture": "textures/ui/T/7",
+      "size": "@anim_zoom", //设置标题的大小（见下面的动画）
+      "alpha": "@anim_size_title0",
+      "uv": [0, 0],
+      "layer": 101,
+      "bilinear": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "ignored": "(not ($title_text = 't7'))"
+  },
+  //产生（必须使用，因为我们调用硬编码的变量和绑定，如“# HUD _ title _ text _ string”（绑定）和“$ actionbar _ text”（变量））-理想情况下，它们应该按照层的顺序出现-从低到高
+  "centered_gui_elements_at_bottom_middle_custom_factory": {
+    "type": "panel",
+    "factory": {
+        "name": "hud_title_text_factory",
+        "control_ids": {
+            "hud_title_text": "centered_gui_elements_at_bottom_middle@hud.centered_gui_elements_at_bottom_middle"
+        }
+     }
+  },
+  "black_conditional_image_factory": {
+    "type": "panel",
+    "factory": {
+        "name": "hud_title_text_factory",
+        "control_ids": {
+            "hud_title_text": "black_conditional_image@hud.black_conditional_image"
+        }
+     }
+  },
+  "main_title_conditional_image_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "main_title_conditional_image@hud.main_title_conditional_image"
+          }
+      }
+  },
+  "subtitle_conditional_image_factory": {
+    "type": "panel",
+    "factory": {
+        "name": "hud_title_text_factory",
+        "control_ids": {
+            "hud_title_text": "subtitle_conditional_image@hud.subtitle_conditional_image"
+        }
+    }
+},
+"tong_1_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_1@hud.tong_1"
+          }
+      }
+  },
+"tong_2_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_2@hud.tong_2"
+          }
+      }
+  },
+"tong_3_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_3@hud.tong_3"
+          }
+      }
+  },
+"tong_4_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_4@hud.tong_4"
+          }
+      }
+  },
+"tong_5_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_5@hud.tong_5"
+          }
+      }
+  },
+"tong_6_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_6@hud.tong_6"
+          }
+      }
+  },
+"tong_7_factory": {
+      "type": "panel",
+      "factory": {
+          "name": "hud_title_text_factory",
+          "control_ids": {
+              "hud_title_text": "tong_7@hud.tong_7"
+          }
+      }
+  },
+  //根面板-这里是我们“修改”主屏幕面板，以添加电影元素。
+  "root_panel": {
+    "bindings": [
+      {
+        "binding_name": "#hud_propagate_alpha",
+        "binding_name_override": "#propagateAlpha",
+        "binding_type": "global"
+      }
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "black_conditional_image_factory@hud.black_conditional_image_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "main_title_conditional_image_factory@hud.main_title_conditional_image_factory": {}
+        }
+      },
+      //TONG
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_1_factory@hud.tong_1_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_2_factory@hud.tong_2_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_3_factory@hud.tong_3_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_4_factory@hud.tong_4_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_5_factory@hud.tong_5_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_6_factory@hud.tong_6_factory": {}
+        }
+      },
+      {"array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "tong_7_factory@hud.tong_7_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+            "subtitle_conditional_image_factory@hud.subtitle_conditional_image_factory": {}
+        }
+      },
+     {
+      "array_name": "controls",
+      "operation": "insert_back",
+      "value": {
+          "bars_top_conditional_image_factory@hud.bars_top_conditional_image_factory": {}
+    }
+   },
+   {
+    "array_name": "controls",
+    "operation": "insert_back",
+    "value": {
+        "bars_bottom_conditional_image_factory@hud.bars_bottom_conditional_image_factory": {}
+  }
+ },
+ {
+  "array_name": "controls",
+  "operation": "insert_back",
+  "value": {
+      "bars_top_conditional_image1_factory@hud.bars_top_conditional_image1_factory": {}
+}
+},
+{
+"array_name": "controls",
+"operation": "insert_back",
+"value": {
+    "bars_bottom_conditional_image1_factory@hud.bars_bottom_conditional_image1_factory": {}
+}
+}
+    ]
+   },
+
+  //动画
+//Tong
+"anim_size_title0": { 
+    "anim_type": "alpha",
+    "easing": "out_quad",
+    "from": 0,
+    "to": 1.0,
+    "duration": 1,
+    "next": "@anim_wait_title"
+  },
+
+  //Title Zoom
+  "anim_zoom": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": ["38%","38%"], //Change these values to change the size of the title
+    "to": ["71%","71%"],
+    "duration": 13.7
+  },
+
+  //Title fade Animation
+  "anim_size_subtitle0": { //Subtitle fade in time
+    "anim_type": "alpha",
+    "easing": "in_out_sine",
+    "from": 0,
+    "to": 1.0,
+    "duration": "$title_fade_in_time",
+    "next": "@anim_wait_subtitle"
+  },
+  "anim_wait_subtitle": { //Subtitle stay time
+    "anim_type": "wait",
+    "duration": "$title_stay_time", //Value (seconds) for the amount of time the subtitle is shown on screen. (currently using the title "times" command value)
+    "next": "@anim_size_title1"
+  },
+  "anim_size_title0": { //Title fade in time
+    "anim_type": "alpha",
+    "easing": "out_quad",
+    "from": 0,
+    "to": 1.0,
+    "duration": "$title_fade_in_time",
+    "next": "@anim_wait_title"
+  },
+  "anim_wait_title": { //Title stay time
+    "anim_type": "wait",
+    "duration": "$title_stay_time", //Value (seconds) for the amount of time the title is shown on screen. (currently using the title "times" command value)
+    "next": "@anim_size_title1"
+  },
+  "anim_size_title1": { //Title fade out time
+    "anim_type": "alpha",
+    "easing": "in_out_sine",
+    "from": 1.0,
+    "to": 0.0,
+    "duration": "$title_fade_out_time"
+  },
+
+  //Black background fade for title animation
+  "black_anim0": {
+      "anim_type": "alpha",
+      "easing": "out_quad",
+      "from": 0,
+      "to": 0.65,
+      "duration": "$title_fade_in_time",
+      "next": "@black_anim_wait"
+  },
+  "black_anim_wait": {
+      "anim_type": "wait",
+      "duration": "$title_stay_time", //Value (seconds) for the amount of time the title background is shown on screen.
+      "next": "@black_anim1"
+  },
+  "black_anim1": {
+      "anim_type": "alpha",
+      "easing": "in_quad",
+      "from": 0.65,
+      "to": 0.0,
+      "duration": "$title_fade_out_time"
+  },
+  //Blink Animation
+  "blink_anim0": {
+    "anim_type": "alpha",
+    "easing": "out_quad",
+    "from": 0,
+    "to": 1,
+    "duration": 1,
+    "next": "@blink_anim_wait"
+  },
+  "blink_anim_wait": {
+      "anim_type": "wait",
+      "duration": 0.01,
+      "next": "@blink_anim1"
+  },
+  "blink_anim1": {
+      "anim_type": "alpha",
+      "easing": "in_quad",
+      "from": 1,
+      "to": 0.0,
+      "duration": 1
+  },
+
+  //Blink Slow Animation
+  "blink_slow_in": {
+    "anim_type": "alpha",
+    "easing": "in_quad",
+    "from": 0.0,
+    "to": 1.0,
+    "duration": 2.0
+  },
+  "blink_slow_out": {
+    "anim_type": "alpha",
+    "easing": "in_out_quad",
+    "from": 1.0,
+    "to": 0.0,
+    "duration": 2.0
+  },
+  //Bars
+  "anim_bars_in": {
+    "anim_type": "size",
+    "easing": "in_out_sine",
+    "from": ["300%", "0%"],
+    "to": ["300%", "100%"],
+    "duration": 1.6, //How long the cinematic black bars take to appear
+    "next": "@anim_bars_wait"
+  },
+  "anim_bars_wait": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": ["300%", "100%"],
+    "to": ["300%", "100%"],
+    "duration": 1
+  },
+  "anim_bars_out": {
+    "anim_type": "size",
+    "easing": "in_out_sine",
+    "from": ["300%", "100%"],
+    "to": ["300%", "0%"],
+    "duration": 1.6, //How long the cinematic black bars take to disappear
+    "destroy_at_end": "bars_top_conditional_image"
+  }
+}

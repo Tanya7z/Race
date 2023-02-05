@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "header": {
+    "description": "地图_RP",
+    "name": "地图专用",
+    "uuid": "b99c012e-187a-a6e9-9cd1-e858aa34764c",
+    "version": [ 1, 0, 2 ],
+    "min_engine_version": [ 1, 8, 0 ]
+  },
+  "modules": [
+    {
+      "description": "地图专用",
+      "type": "resources",
+      "uuid": "f3256cdd-0e83-e985-1489-b9f4f126a62e",
+      "version": [ 0, 0, 1 ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "AFEC5210-0F19-3BE8-B327-F2B070DAF4CD",
+      "version": [ 1, 0, 2 ]
+    }
+  ]
+}

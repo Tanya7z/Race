@@ -1,21 +1,23 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "地图",
+		"name": "地图_BP",
 		"description": "地图专用",
 		"uuid": "AFEC5210-0F19-3BE8-B327-F2B070DAF4CD",
-		"version": [1, 0, 1],
+		"version": [1, 0, 2],
 		"min_engine_version": [1, 19, 0]
 	},
 	"modules": [
 		{
 			"type": "data",
+			"description": "地图",
 			"uuid": "4C3B5174-3523-00DD-D434-E58890CDB1B5",
 			"version": [1, 0, 1]
 		},
 		{
 			"language": "javascript",
 			"type": "script",
+			"description":"BaxterAPI",
 			"uuid": "E1ABA03A-D1E6-4217-C036-4746BD6D22BF",
 			"version": [1, 0, 1],
 			"entry": "scripts/bax.js"
