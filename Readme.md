@@ -19,7 +19,8 @@
 _[点击跳转](Plot.md)_
 
 # 流程规划
-![Plan](plan.jpeg)
+![Plan_oe](plan_oe.jpeg)
+![Plan_bax](plan_bax.jpeg)
 
 ## 留言
 > Baxter^sb^:
