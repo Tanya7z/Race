@@ -14,7 +14,7 @@
    - /title @p title subtitle 标题2 
    - /title @p title t1-t7 用于显示字幕 目前贴图用于演示
   - ScriptApi V0.0.1：  
-   - 添加于 _0.0.2_  
+   > 添加于 _0.0.2_  
 # 剧本  
 _[点击跳转](Plot.md)_
 
